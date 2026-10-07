@@ -8,7 +8,6 @@ on:
     branches:
     - main
 
-# ESTA É A LINHA QUE RESOLVE O ERRO 403
 permissions:
   contents: write
 
@@ -23,8 +22,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=#007BFF&color_dots=#ebedf0,#c2e0ff,#7ab8ff,#338fff,#007BFF
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#007BFF&color_dots=#161b22,#07325c,#00549e,#007BFF,#5eb0ff
             
       - name: Push to Output Branch
         uses: crazy-max/ghaction-github-pages@v4
