@@ -8,6 +8,10 @@ on:
     branches:
     - main
 
+# ESTA É A LINHA QUE RESOLVE O ERRO 403
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
